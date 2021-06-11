@@ -12,6 +12,7 @@
     "test": "npm run lint && gulp generate-assets && jest"
   },
   "dependencies": {
+    "@scottish-government/pattern-library": "0.0.180",
     "acorn": "^7.1.1",
     "ansi-colors": "^4.1.1",
     "basic-auth": "^2.0.0",

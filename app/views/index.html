@@ -1,44 +1,63 @@
-
-{% extends "layout.html" %}
+{% extends "ds_layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  ScotGov Prototype Kit
 {% endblock %}
 
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
-    </div>
+  <div class="ds_layout__header">
+    <header class="heading">
+      <div class="ds_page-header">
+        <h1 class="ds_page-header__title">The Scottish Government Prototype Kit</h1>
+      </div>
+    </header>
   </div>
 
+  <div class="ds_layout__content">
+
+    <div class="ds_warning-text">
+      <strong class="ds_warning-text__icon" aria-hidden="true"></strong>
+      <strong class="visually-hidden">Warning</strong>
+      <div class="ds_warning-text__text">This is an unofficial, unsupported tool. It has not been created by an employee of any government department.</div>
+    </div>
+
+    <p>This kit lets you rapidly create HTML prototypes of Scottish Government services.</p>
+
+    <p>It&rsquo;s a copy of the
+      <a href="https://github.com/alphagov/govuk-prototype-kit">GOV.UK prototype kit</a>
+      with the Digital Scotland design system pack installed and a layout setup.</p>
+
+    <h2 class="heading-2">About this page</h2>
+
+    <p>We recommend you add links to your prototype to this page, rather than delete it. You'll find this page in the kit at '/app/views/index.html'.</p>
+
+    <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+
+
+
+
+<div data-module="ds-datepicker" class="ds_datepicker">
+  <label class="ds_label" for="start-date">Start date</label>
+  <div class="ds_input__wrapper">
+    <input id="start-date" data-maxdate="19/09/2020" data-mindate="09/08/2020" placeholder="dd/mm/yyyy" type="text" class="ds_input  ds_input--fixed-10" />
+  </div>
+</div>
+
+
+
+    <h2>Examples and documentation</h2>
+
+    <ul>
+      <li>
+        <a href="https://designsystem.gov.scot/">Digital Scotland design system</a>
+      </li>
+      <li>
+        <a href="https://github.com/scottishgovernment/pattern-library">Digital Scotland design system github repository</a>
+      </li>
+      <li>
+        <a href="https://github.com/chrisadesign/scotgov-prototype-kit">Prototype kit github repository</a>
+      </li>
+    </ul>
+  </div>
 {% endblock %}
